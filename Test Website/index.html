@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praxis Katharina Seidel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Praxis Katharina Seidel</h1>
+        </header>
+        <section class="oeffnungszeiten">
+            <h2>Öffnungszeiten</h2>
+            <ul>
+                <li><strong>Montag:</strong> 8-12 Uhr, 16-18 Uhr</li>
+                <li><strong>Dienstag:</strong> 8-12 Uhr, 16:30-18 Uhr</li>
+                <li><strong>Mittwoch:</strong> 8-12 Uhr</li>
+                <li><strong>Donnerstag:</strong> 8-12 Uhr, 15-17 Uhr</li>
+                <li><strong>Freitag:</strong> 8-12 Uhr</li>
+                <li><strong>Samstag - Sonntag:</strong> Geschlossen</li>
+            </ul>
+        </section>
+        <section class="kontakt">
+            <h2>Kontakt</h2>
+            <p><strong>Adresse:</strong> Höpflinger Weg 2, 83313 Siegsdorf</p>
+            <p><strong>Telefon:</strong> +49 86626644310</p>
+            <p><strong>Email:</strong> kontakt@praxisseidel.de</p>
+        </section>      
+        <section class="terminanfrage">
+            <h2>Termin oder Rezept anfragen</h2>
+            <button id="anfrageButton">Anfrage stellen</button>
+        
+            <form id="anfrageForm" style="display:none;">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="anliegen">Anliegen:</label>
+                    <textarea id="anliegen" name="anliegen" required></textarea>
+                </div>
+                <button type="submit">Senden</button>
+            </form>
+        </section>
+          
+    </div>
+    <footer class="footer">
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('anfrageButton').addEventListener('click', function() {
+                var form = document.getElementById('anfrageForm');
+                if (form.style.display === 'none' || form.style.display === '') {
+                    form.style.display = 'block';
+                } else {
+                    form.style.display = 'none';
+                }
+            });
+        });
+    </script>       
+</body>
+</html>
